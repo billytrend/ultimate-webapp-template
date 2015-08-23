@@ -3,10 +3,11 @@ window.jQuery = $;
 require("../index.html");
 require("../css/main.css");
 
-var React = require('react'),
-    Root = require('./views/root.jsx');
+var React = require('react')
+,	Root = require('./views/root.jsx')
+,	flux = require('./models/flux');
 
 React.render(
-    <Root />,
+    <Root flux={ flux } />,
     document.getElementById('root')
 );
