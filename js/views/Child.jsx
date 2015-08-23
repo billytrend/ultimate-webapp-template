@@ -19,7 +19,7 @@ module.exports = React.createClass({
 
 	render: function() {
 		return <div>
-			<RouteHandler />
+			{ this.state.message }
 		</div>
 	}
 });

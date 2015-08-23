@@ -4,10 +4,13 @@ require("../index.html");
 require("../css/main.css");
 
 var React = require('react')
-,	Root = require('./views/root.jsx')
-,	flux = require('./models/flux');
+,	flux = require('./models/flux')
+,	routes = require('./Router.jsx')
+,	Router = require('react-router');
 
-React.render(
-    <Root flux={ flux } />,
-    document.getElementById('root')
-);
+Router.run(routes, function (Handler) {
+	React.render(
+	    <Handler flux={ flux } />,
+	    document.getElementById('root')
+	);
+});
